@@ -6,6 +6,7 @@ import java.util.List;
 import com.github.catapan.graphql.address.Address;
 
 import org.eclipse.microprofile.graphql.GraphQLApi;
+import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Name;
 import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.graphql.Source;
@@ -28,5 +29,10 @@ public class PeopleResource {
     address.setStreet("Saint Catarina");
     address.setNumber(123);
     return address;
+  }
+
+  @Mutation
+  public People addPeople(People people) {
+    return people;
   }
 }
